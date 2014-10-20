@@ -1,0 +1,9 @@
+<%= element_view_for(element) do |el| -%>
+<h5>
+  <%= el.render :categories_headline %>
+</h5>
+  <% element.all_contents_by_name('category').each do |content| %>
+<p>
+  <%= render_essence_view(content) %>
+</p>
+<%- end -%>

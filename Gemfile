@@ -41,3 +41,5 @@ gem 'spring',        group: :development
 gem 'alchemy_cms', '~> 3.0.0'
 gem 'alchemy-devise', github: 'magiclabs/alchemy-devise', branch: '2.0-stable'
 
+gem 'foundation-rails'
+

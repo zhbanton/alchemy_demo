@@ -4,5 +4,18 @@
 
 - name: index
   unique: true
-  elements: [article]
+  elements: [article, item]
   autogenerate: [article]
+
+- name: products
+  cache: false
+  elements: [item]
+
+- name: contact
+  cache: false
+  unique: true
+  elements: [headline, contactform, text]
+  autogenerate: [headline, contactform]
+
+- name: blog
+  elements: [blog_title, blog_post, categories_block, featured]

@@ -17,3 +17,69 @@
     type: EssenceRichtext
     default: :article_text
     hint: true
+
+- name: item
+  contents:
+  - name: title
+    type: EssenceText
+  - name: picture
+    type: EssencePicture
+  - name: description
+    type: EssenceText
+
+- name: blog_title
+  unique: true
+  contents:
+  - name: title
+    type: EssenceText
+    default: Blog
+  - name: text
+    type: EssenceText
+    default: This is my blog. It's awesome.
+
+- name: blog_post
+  contents:
+  - name: blog_post_title
+    type: EssenceText
+    default: Blog Post Title
+    settings:
+      linkable: true
+  - name: blog_post_meta
+    type: EssenceText
+    default: "Written by John Smith on August 12, 2012"
+  - name: blog_post_intro_text
+    type: EssenceRichtext
+  - name: blog_post_image
+    type: EssencePicture
+  - name: blog_post_content
+    type: EssenceRichtext
+
+- name: categories_block
+  contents:
+  - name: categories_headline
+    type: EssenceText
+    default: Categories
+  - name: category
+    type: EssenceText
+    settings:
+      deleteable: true
+      linkable: true
+  available_contents:
+  - name: category
+    type: EssenceText
+    settings:
+      deletable: true
+      linkable: true
+
+- name: featured
+  unique: true
+  contents:
+  - name: featured_headline
+    type: EssenceText
+    default: "Featured"
+  - name: featured_text
+    type: EssenceRichtext
+  - name: featured_link
+    type: EssenceText
+    settings:
+      linkable: true
